@@ -5,7 +5,7 @@ Matlab `numgrid`, has multiple types, for now, only the 'B' type is implemented.
 
 You can find more solutions implemeneted in Mathematica, in [this Mathematica Stackexchange question](https://mathematica.stackexchange.com/q/270516/77079).
 
-Download the `.dll` file from release section and use the following command in Mathematica:
+Download the `.dll` file from [Release Section](https://github.com/ben-izd/numgrid/releases/tag/Main) and use the following command in Mathematica:
 ```
 NumGridBCompiled = 
  LibraryFunctionLoad["C:\\numgrid.dll", "numgrid_b", {Integer}, 
