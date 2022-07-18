@@ -5,7 +5,7 @@ ClearAll[NumGrid];
 Begin["`Private`"];
 ClearAll[Unload];
 Unload[]:=(LibraryUnload[NumGrid`$libraryPath];LibraryUnload[NumGrid`$libraryPath];)
-$Types={"S","L","C","D","A","H","B"};
+$Types={"A", "B", "C", "D", "H", "L", "S"};
 Block[{library=LibraryLoad[NumGrid`$libraryPath]},
 
 {NumGridS,NumGridL,NumGridC,NumGridD,NumGridA,NumGridH,NumGridB}=LibraryFunctionLoad[library,"numgrid_"<>#,{Integer},LibraryDataType["NumericArray","UnsignedInteger32",2]]&/@ToLowerCase[$Types];
