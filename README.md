@@ -20,7 +20,7 @@ NumGrid["A", 5]
 NumGrid["B", 5, Parallelization -> True]
 ```
 
-### Other than Windows users
+### Non-Windows users
 Install [Rust](https://www.rust-lang.org/) and build the project on your OS, then follow from step 2 of instruction.
 
 <hr>
