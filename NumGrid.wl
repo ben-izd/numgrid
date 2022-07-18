@@ -4,9 +4,9 @@ BeginPackage["NumGrid`"];
 ClearAll[NumGrid];
 Begin["`Private`"];
 ClearAll[Unload];
-Unload[]:=(LibraryUnload[NumGrid`LibraryPath];LibraryUnload[NumGrid`LibraryPath];)
+Unload[]:=(LibraryUnload[NumGrid`$libraryPath];LibraryUnload[NumGrid`$libraryPath];)
 $Types={"S","L","C","D","A","H","B"};
-Block[{library=LibraryLoad[NumGrid`LibraryPath]},
+Block[{library=LibraryLoad[NumGrid`$libraryPath]},
 
 {NumGridS,NumGridL,NumGridC,NumGridD,NumGridA,NumGridH,NumGridB}=LibraryFunctionLoad[library,"numgrid_"<>#,{Integer},LibraryDataType["NumericArray","UnsignedInteger32",2]]&/@ToLowerCase[$Types];
 ParallelNumGridB=LibraryFunctionLoad[library,"numgrid_b_parallel",{Integer},LibraryDataType["NumericArray","UnsignedInteger32",2]];
