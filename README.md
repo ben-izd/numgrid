@@ -23,5 +23,6 @@ NumGrid["B", 5, Parallelization -> True]
 ### Other than Windows users
 Install [Rust](https://www.rust-lang.org/) and build the project on your OS, then follow from step 2 of instruction.
 
+<hr>
 
 You can find solutions implemeneting `B` type in Mathematica, in [this Mathematica Stackexchange question](https://mathematica.stackexchange.com/q/270516/77079).
