@@ -1,18 +1,27 @@
 # numgrid
 Matlab numgrid implementation in Rust for Mathematica
 
-Matlab `numgrid`, has multiple types, for now, only the 'B' type is implemented.
 
-You can find more solutions implemeneted in Mathematica, in [this Mathematica Stackexchange question](https://mathematica.stackexchange.com/q/270516/77079).
+### Instruction 
+1. Download the `.dll` file from [Release Section](https://github.com/ben-izd/numgrid/releases/tag/Main).
+2. In Mathematica set ```NumGrid`$libraryPath``` variable to the path you downloaded `.dll` file.
+3. Run [`NumGrid.wl`](https://github.com/ben-izd/numgrid/blob/main/NumGrid.wl) file which define a `NumGrid` function that include all the interfaces.
 
-Download the `.dll` file from [Release Section](https://github.com/ben-izd/numgrid/releases/tag/Main) and use the following command in Mathematica:
+
+You can `NumGrid` as follows:
 ```
-NumGridBCompiled = 
- LibraryFunctionLoad["C:\\numgrid.dll", "numgrid_b", {Integer}, 
-  LibraryDataType["NumericArray", "UnsignedInteger32", 2]]
+(* Support lower case *)
+NumGrid["a", 5]
   
-NumGridBParallelCompiled = 
- LibraryFunctionLoad["C:\\numgrid.dll", "numgrid_b_parallel", {Integer}, 
-  LibraryDataType["NumericArray", "UnsignedInteger32", 2]]
+(* Support upper case *)
+NumGrid["A", 5]
+
+(* Only "B" type can run in parallel *)
+NumGrid["B", 5, Parallelization -> True]
 ```
-`NumGridBCompiled` is single threaded, and `NumGridBParallelCompiled` is multi-thread. Both return  `NumericArray` with "UnsignedInteger32" type.
+
+### Other than Windows users
+Install [Rust](https://www.rust-lang.org/) and build the project on your OS, then follow from step 2 of instruction.
+
+
+You can find solutions implemeneting `B` type in Mathematica, in [this Mathematica Stackexchange question](https://mathematica.stackexchange.com/q/270516/77079).
