@@ -8,7 +8,7 @@ Matlab numgrid implementation in Rust for Mathematica
 3. Run [`NumGrid.wl`](https://github.com/ben-izd/numgrid/blob/main/NumGrid.wl) file which define a `NumGrid` function that include all the interfaces.
 
 
-`NumGrid` supports `S`, `L`, `C`, `D`, `A`, `H` and `B` except `N` types. You can `NumGrid` as follows:
+`NumGrid` supports `S`, `L`, `C`, `D`, `A`, `H` and `B` types except `N`. You can `NumGrid` as follows:
 ```
 (* Support lower case *)
 NumGrid["a", 5]
